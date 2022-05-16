@@ -10,18 +10,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="290dp"
+        android:layout_height="@dimen/box_layout_height"
         android:background="@drawable/box"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/price"
+            android:id="@+id/money"
             style="@style/main_title_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="@dimen/margin_52dp"
             android:fontFamily="@font/font"
-            android:text="@string/string_price"
+            android:text="@string/string_money"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,10 +33,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/string_dolar_sign"
-            app:layout_constraintEnd_toStartOf="@+id/price"
+            app:layout_constraintEnd_toStartOf="@+id/money"
             app:layout_constraintHorizontal_bias="0.9"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/price" />
+            app:layout_constraintTop_toTopOf="@+id/money" />
 
         <TextView
             android:id="@+id/textView3"
@@ -44,19 +45,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/string_usd"
-            app:layout_constraintEnd_toEndOf="@+id/price"
-            app:layout_constraintStart_toStartOf="@+id/price"
-            app:layout_constraintTop_toBottomOf="@+id/price" />
+            app:layout_constraintEnd_toEndOf="@+id/money"
+            app:layout_constraintStart_toStartOf="@+id/money"
+            app:layout_constraintTop_toBottomOf="@+id/money" />
 
         <Button
             android:id="@+id/button_add_money"
             style="@style/main_button_style"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginStart="@dimen/main_padding"
+            android:layout_marginTop="28dp"
             android:text="@string/string_add_money"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            app:cornerRadius="15dp"
+            app:cornerRadius="@dimen/button_radius"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView3"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,38 +65,35 @@
         <Button
             android:id="@+id/button_transfer"
             style="@style/main_button_style"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="36dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="@dimen/main_padding"
             android:fontFamily="@font/gilroy_medium"
             android:text="@string/string_transfer_funds"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            app:cornerRadius="15dp"
+            app:cornerRadius="@dimen/button_radius"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
             app:layout_constraintVertical_bias="0.0" />
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="100dp">
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/wallet_float_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/blue"
+            android:backgroundTint="@color/primaryColor"
             android:contentDescription="TODO"
             android:src="@drawable/ic_main_bottom_add"
             app:layout_anchor="@id/wallet_bottom_bar"

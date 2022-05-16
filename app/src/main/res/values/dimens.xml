@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  Activity Main Dimens.  -->
+    <dimen name="box_layout_height">290dp</dimen>
+    <dimen name="margin_52dp">52dp</dimen>
+    <dimen name="main_padding">36dp</dimen>
+    <dimen name="button_radius">15dp</dimen>
+    <dimen name="small_text_size">16sp</dimen>
+    <dimen name="normal_text_size">24sp</dimen>
+    <dimen name="large_text_size">48sp</dimen>
+</resources>
