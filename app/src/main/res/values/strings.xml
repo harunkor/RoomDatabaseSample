@@ -1,7 +1,8 @@
 <resources>
+    <!--  Activity Main String.  -->
     <string name="app_name">RoomDatabaseSample</string>
     <string name="string_add_money">Add Money</string>
-    <string name="string_price">31 000</string>
+    <string name="string_money">31 000</string>
     <string name="string_dolar_sign">$</string>
     <string name="string_usd">USD</string>
     <string name="string_transfer_funds">Transfer Funds</string>

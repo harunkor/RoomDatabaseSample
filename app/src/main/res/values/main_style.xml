@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--  Activity Main Style.  -->
     <style name="main_button_style">
         <item name="android:layout_width">170dp</item>
         <item name="android:layout_height">60dp</item>
