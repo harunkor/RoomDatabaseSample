@@ -16,12 +16,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         sleepViewModel.allNights.observe(this , Observer {  allNights ->
             Log.v("AKBANK",allNights.toString())
         })
-
-
 
     }
 }

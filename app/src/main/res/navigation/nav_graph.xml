@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.harunkor.roomdatabasesample.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/analyticsFragment"
+        android:name="com.harunkor.roomdatabasesample.AnalyticsFragment"
+        android:label="fragment_analytics"
+        tools:layout="@layout/fragment_analytics" />
+    <fragment
+        android:id="@+id/addMoneyFragment"
+        android:name="com.harunkor.roomdatabasesample.AddMoneyFragment"
+        android:label="fragment_add_money"
+        tools:layout="@layout/fragment_add_money" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.harunkor.roomdatabasesample.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.harunkor.roomdatabasesample.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/addPaymentFragment"
+        android:name="com.harunkor.roomdatabasesample.AddPaymentFragment"
+        android:label="fragment_add_payment"
+        tools:layout="@layout/fragment_add_payment" />
+</navigation>
