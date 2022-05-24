@@ -10,6 +10,8 @@ data class IncomeTable(
     @PrimaryKey(autoGenerate = true)
     var incomeId: Long = 0L,
 
+    @ColumnInfo(name = "campany_logo")
+    val companyLogo : Int = 0,
     @ColumnInfo(name = "income_title")
     val incomeTitle : String = "",
 

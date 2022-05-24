@@ -9,11 +9,16 @@ import androidx.room.PrimaryKey
 data class OutcomeTable(
     @PrimaryKey(autoGenerate = true)
     var outcomeId: Long = 0L,
+
+    @ColumnInfo(name = "campany_logo")
+    val companyLogo : Int = 0,
+
     @ColumnInfo(name = "outcome_title")
     val outcomeTitle: String = "",
 
     @ColumnInfo(name = "outcome_sub_title")
     val outcomeSubTitle: String = "",
+
     @ColumnInfo(name = "outcome_total")
     val outcomeTotal : Float = 0.0F,
 

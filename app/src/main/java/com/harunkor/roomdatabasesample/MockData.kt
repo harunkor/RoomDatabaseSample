@@ -1,17 +1,27 @@
 package com.harunkor.roomdatabasesample
 
+import android.graphics.drawable.Drawable
 import android.media.Image
 
-class MockData {
-    var id: Long = 0
-    lateinit var transferTitle: String
-    lateinit var transferSubTitle: String
-    var total: Float = 0.0f
+object MockData {
 
-    constructor(id:Long, transferTitle: String,transferSubTitle: String, total: Float)
+    fun getIncomeTableList() = arrayListOf(
+        IncomeTable(1, R.drawable.box,"Apple Music Subscription", "Apple Store", -50F),
+        IncomeTable(2,R.drawable.box, "Spotify Music Subscription","Spotify", -50.0F),
+        IncomeTable(3, R.drawable.box,"John Doe","Paypal", 150F),
+        IncomeTable(1, R.drawable.box,"Emily Watts", "Citi Bank",200.0F),
+    )
+    fun getOutcomeTableList() = arrayListOf(
+        OutcomeTable(1, R.drawable.box,"Apple Music Subscription", "Apple Store", -50F),
+        OutcomeTable(2,R.drawable.box, "Spotify Music Subscription","Spotify", -50.0F),
+        OutcomeTable(3, R.drawable.box,"John Doe","Paypal", 150F),
+        OutcomeTable(1, R.drawable.box,"Emily Watts", "Citi Bank",200.0F),
+    )
 
-    val listItem1 = MockData(1, "Apple Music Subscription", "Apple Store", -50F)
-    val listItem2 = MockData(2, "Spotify Music Subscription","Spotify", -50.0F)
-    val listItem3 = MockData(3, "John Doe","Paypal", 150F)
-    val listItem4 = MockData(1, "Emily Watts", "Citi Bank",200.0F)
+    fun getAllTableList() = arrayListOf(
+        AllTranslation(1,"Apple Music Subscription", "Apple Store", -50F),
+        AllTranslation(2,"Spotify Music Subscription","Spotify", -50.0F),
+        AllTranslation(3,"John Doe","Paypal", 150F),
+        AllTranslation(1,"Emily Watts", "Citi Bank",200.0F),
+    )
 }
