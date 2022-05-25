@@ -3,29 +3,56 @@
 
     <!--  Activity Main Style.  -->
     <style name="main_button_style">
-        <item name="android:layout_width">170dp</item>
-        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">@dimen/_130sdp</item>
+        <item name="android:layout_height">@dimen/_44sdp</item>
         <item name="android:backgroundTint">@color/primaryLightColor</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:fontFamily">@font/gilroy_medium</item>
     </style>
 
-    <style name="main_title_style">
+    <style name="main_title_large_style">
         <item name="android:fontFamily">@font/gilroy_bold</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="android:textSize">@dimen/_36ssp</item>
     </style>
 
-    <style name="main_subTitle_style">
+    <style name="main_title_medium_style">
         <item name="android:fontFamily">@font/gilroy_medium</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:textSize">@dimen/_28ssp</item>
     </style>
 
+    <style name="main_title_small_style">
+        <item name="android:fontFamily">@font/gilroy_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_24ssp</item>
+    </style>
+
+    <style name="main_currency_text_style">
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="main_sub_title_style">
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+    </style>
+
+    <style name="main_sub_title_small_style">
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
 
     <!--  Activity Main Dimens.  -->
     <dimen name="box_layout_height">290dp</dimen>
@@ -36,14 +63,19 @@
     <dimen name="normal_text_size">24sp</dimen>
     <dimen name="large_text_size">48sp</dimen>
 
-
     <!--  Activity Main String.  -->
     <string name="app_name">RoomDatabaseSample</string>
     <string name="string_add_money">Add Money</string>
     <string name="string_money">31 000</string>
+    <string name="string_hint_income_outcome">3 000</string>
     <string name="string_dolar_sign">$</string>
     <string name="string_usd">USD</string>
     <string name="string_transfer_funds">Transfer Funds</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_income">Income</string>
+    <string name="string_outcome">Outcome</string>
+    <string name="title_main">Main</string>
+    <string name="title_analytics">Analytics</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_empty">Empty</string>
 </resources>
