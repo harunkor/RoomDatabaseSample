@@ -5,33 +5,30 @@
     <item
         android:id="@+id/app_bar_main"
         android:icon="@drawable/ic_main_menu"
-        android:title="Analytics"
-        app:showAsAction="always"
-        />
+        android:title="@string/title_main"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/app_bar_analytics"
         android:icon="@drawable/ic_main_analytics"
-        android:title="Analytics"
-        app:showAsAction="always"
-        />
+        android:title="@string/title_analytics"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/empty"
+        android:enabled="false"
+        android:title="@string/title_empty"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/app_bar_settings"
         android:icon="@drawable/ic_main_settings"
-        android:title="Analytics"
-        app:showAsAction="always"
-        />
+        android:title="@string/title_settings"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/app_bar_notification"
         android:icon="@drawable/ic_main_notification"
-        android:title="Analytics"
-        app:showAsAction="always"
-        />
-
-
-
-
-
+        android:title="@string/title_notifications"
+        app:showAsAction="ifRoom" />
 </menu>
