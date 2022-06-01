@@ -1,6 +1,10 @@
 package com.harunkor.roomdatabasesample
 
 import androidx.lifecycle.*
+import com.harunkor.roomdatabasesample.domain.model.AllTransactions
+import com.harunkor.roomdatabasesample.domain.model.IncomeTable
+import com.harunkor.roomdatabasesample.domain.model.OutcomeTable
+import com.harunkor.roomdatabasesample.domain.repository.AllTransactionsRepository
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val allTranslationRepository: AllTransactionsRepository) : ViewModel() {

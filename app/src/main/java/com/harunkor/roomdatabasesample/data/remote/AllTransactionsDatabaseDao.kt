@@ -1,8 +1,11 @@
-package com.harunkor.roomdatabasesample
+package com.harunkor.roomdatabasesample.data.remote
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import com.harunkor.roomdatabasesample.domain.model.AllTransactions
+import com.harunkor.roomdatabasesample.domain.model.IncomeTable
+import com.harunkor.roomdatabasesample.domain.model.OutcomeTable
 import kotlinx.coroutines.flow.Flow
 
 @Dao

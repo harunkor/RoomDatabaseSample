@@ -1,7 +1,10 @@
-package com.harunkor.roomdatabasesample
+package com.harunkor.roomdatabasesample.domain.repository
 
 import androidx.annotation.WorkerThread
-import androidx.lifecycle.LiveData
+import com.harunkor.roomdatabasesample.data.remote.AllTransactionsDatabaseDao
+import com.harunkor.roomdatabasesample.domain.model.AllTransactions
+import com.harunkor.roomdatabasesample.domain.model.IncomeTable
+import com.harunkor.roomdatabasesample.domain.model.OutcomeTable
 import kotlinx.coroutines.flow.Flow
 
 class AllTransactionsRepository(private val allTranslationDatabaseDao: AllTransactionsDatabaseDao) {

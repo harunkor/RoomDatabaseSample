@@ -7,32 +7,32 @@
 
     <fragment
         android:id="@+id/app_bar_main"
-        android:name="com.harunkor.roomdatabasesample.MainFragment"
+        android:name="com.harunkor.roomdatabasesample.presentation.home.HomeFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/app_bar_analytics"
-        android:name="com.harunkor.roomdatabasesample.AnalyticsFragment"
+        android:name="com.harunkor.roomdatabasesample.presentation.analytics.AnalyticsFragment"
         android:label="fragment_analytics"
         tools:layout="@layout/fragment_analytics" />
     <fragment
         android:id="@+id/addMoneyFragment"
-        android:name="com.harunkor.roomdatabasesample.AddMoneyFragment"
+        android:name="com.harunkor.roomdatabasesample.presentation.addmoney.AddMoneyFragment"
         android:label="fragment_add_money"
         tools:layout="@layout/fragment_add_money" />
     <fragment
         android:id="@+id/app_bar_settings"
-        android:name="com.harunkor.roomdatabasesample.SettingsFragment"
+        android:name="com.harunkor.roomdatabasesample.presentation.setting.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/app_bar_notification"
-        android:name="com.harunkor.roomdatabasesample.NotificationFragment"
+        android:name="com.harunkor.roomdatabasesample.presentation.notification.NotificationFragment"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" />
     <fragment
         android:id="@+id/addPaymentFragment"
-        android:name="com.harunkor.roomdatabasesample.AddPaymentFragment"
+        android:name="com.harunkor.roomdatabasesample.presentation.addpayment.AddPaymentFragment"
         android:label="fragment_add_payment"
         tools:layout="@layout/fragment_add_payment" />
 </navigation>

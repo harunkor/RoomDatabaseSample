@@ -1,4 +1,9 @@
-package com.harunkor.roomdatabasesample
+package com.harunkor.roomdatabasesample.utils
+
+import com.harunkor.roomdatabasesample.R
+import com.harunkor.roomdatabasesample.domain.model.AllTransactions
+import com.harunkor.roomdatabasesample.domain.model.IncomeTable
+import com.harunkor.roomdatabasesample.domain.model.OutcomeTable
 
 object MockData {
 

@@ -1,9 +1,12 @@
-package com.harunkor.roomdatabasesample
+package com.harunkor.roomdatabasesample.data.remote
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.harunkor.roomdatabasesample.domain.model.AllTransactions
+import com.harunkor.roomdatabasesample.domain.model.IncomeTable
+import com.harunkor.roomdatabasesample.domain.model.OutcomeTable
 import kotlinx.coroutines.CoroutineScope
 
 @Database(entities = [AllTransactions::class, IncomeTable::class, OutcomeTable::class], version = 1)

@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
+import com.harunkor.roomdatabasesample.utils.MockData
 
 
 class MainActivity : AppCompatActivity() {

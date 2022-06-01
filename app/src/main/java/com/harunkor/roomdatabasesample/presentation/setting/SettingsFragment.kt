@@ -1,13 +1,14 @@
-package com.harunkor.roomdatabasesample
+package com.harunkor.roomdatabasesample.presentation.setting
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.harunkor.roomdatabasesample.R
 
 
-class AddMoneyFragment : Fragment() {
+class SettingsFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class AddMoneyFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_money, container, false)
+        return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
 

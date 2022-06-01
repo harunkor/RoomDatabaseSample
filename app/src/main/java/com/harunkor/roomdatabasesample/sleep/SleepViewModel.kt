@@ -1,6 +1,8 @@
 package com.harunkor.roomdatabasesample
 
 import androidx.lifecycle.*
+import com.harunkor.roomdatabasesample.sleep.SleepNight
+import com.harunkor.roomdatabasesample.sleep.SleepRepository
 import kotlinx.coroutines.launch
 
 
