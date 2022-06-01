@@ -1,4 +1,4 @@
-package com.harunkor.roomdatabasesample
+package com.harunkor.roomdatabasesample.sleep
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

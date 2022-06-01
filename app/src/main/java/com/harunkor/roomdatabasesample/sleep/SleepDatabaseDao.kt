@@ -1,6 +1,5 @@
-package com.harunkor.roomdatabasesample
+package com.harunkor.roomdatabasesample.sleep
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 

@@ -1,4 +1,4 @@
-package com.harunkor.roomdatabasesample
+package com.harunkor.roomdatabasesample.sleep
 
 import android.content.Context
 import androidx.room.Database
