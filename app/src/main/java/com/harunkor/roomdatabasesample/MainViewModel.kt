@@ -9,9 +9,11 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(private val allTranslationRepository: AllTransactionsRepository) : ViewModel() {
 
-    val allTranslations : LiveData<List<AllTransactions>> = allTranslationRepository.allTranslation.asLiveData()
-    val allIncomes : LiveData<List<IncomeTable>> = allTranslationRepository.allIncomes.asLiveData()
-    val allOutcomes : LiveData<List<OutcomeTable>> = allTranslationRepository.allOutcomes.asLiveData()
+    val allTranslations: LiveData<List<AllTransactions>> =
+        allTranslationRepository.allTranslation.asLiveData()
+    val allIncomes: LiveData<List<IncomeTable>> = allTranslationRepository.allIncomes.asLiveData()
+    val allOutcomes: LiveData<List<OutcomeTable>> =
+        allTranslationRepository.allOutcomes.asLiveData()
 
     fun insertAllTranslation(allTranslation: AllTransactions) = viewModelScope.launch {
         allTranslationRepository.insertAllTranslation(allTranslation)
@@ -28,7 +30,8 @@ class MainViewModel(private val allTranslationRepository: AllTransactionsReposit
 
 }
 
-class AllTranslationViewModelFactory(private val repository: AllTransactionsRepository) : ViewModelProvider.Factory {
+class AllTranslationViewModelFactory(private val repository: AllTransactionsRepository) :
+    ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")

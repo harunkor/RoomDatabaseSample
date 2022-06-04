@@ -8,8 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.harunkor.roomdatabasesample.AllTransactionsApplication
-import com.harunkor.roomdatabasesample.MainFragmentViewModel
-import com.harunkor.roomdatabasesample.MainFragmentViewModelFactory
 import com.harunkor.roomdatabasesample.databinding.FragmentMainBinding
 
 
