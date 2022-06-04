@@ -24,7 +24,12 @@
         <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.226" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="app/src/main/res/layout/base_main.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_add_money.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/fragment_add_payment.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/fragment_analytics.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.15729166666666666" />
+        <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/item_all_transaction.xml" value="0.15" />
         <entry key="app/src/main/res/menu/main_bottom_menu.xml" value="0.22552083333333334" />
       </map>

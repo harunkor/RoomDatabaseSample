@@ -16,15 +16,15 @@ interface SleepDatabaseDao {
     fun delete(sleepNight: SleepNight)
 
     @Query("SELECT * FROM daily_sleep_quality_table WHERE nightId = :key")
-    fun get(key:Long) : SleepNight?
+    fun get(key: Long): SleepNight?
 
-    @Query( "DELETE FROM daily_sleep_quality_table")
+    @Query("DELETE FROM daily_sleep_quality_table")
     suspend fun clear()
 
     @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC ")
-    fun getAllNights() : Flow<List<SleepNight>>
+    fun getAllNights(): Flow<List<SleepNight>>
 
     @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1")
-    fun getTonight() : SleepNight?
+    fun getTonight(): SleepNight?
 
 }

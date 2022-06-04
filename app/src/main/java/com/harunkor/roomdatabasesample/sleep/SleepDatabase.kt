@@ -14,31 +14,30 @@ abstract class SleepDatabase : RoomDatabase() {
 
     abstract fun sleepDatabaseDao(): SleepDatabaseDao //e1
 
-    companion object{
+    companion object {
         @Volatile
-        private  var INSTANCE: SleepDatabase? = null
+        private var INSTANCE: SleepDatabase? = null
 
-        fun getInstance(context: Context,scope: CoroutineScope) : SleepDatabase {
-                synchronized(this) {
-                    var instance = INSTANCE
-                    if(instance == null){
-                        instance = Room.databaseBuilder(
-                            context.applicationContext,
-                            SleepDatabase::class.java,
-                            "sleep_history_database"
-                        )
-                            .fallbackToDestructiveMigration()
-                            .addCallback(SleepDatabaseCallback(scope))
-                            .build()
-                        INSTANCE = instance
+        fun getInstance(context: Context, scope: CoroutineScope): SleepDatabase {
+            synchronized(this) {
+                var instance = INSTANCE
+                if (instance == null) {
+                    instance = Room.databaseBuilder(
+                        context.applicationContext,
+                        SleepDatabase::class.java,
+                        "sleep_history_database"
+                    )
+                        .fallbackToDestructiveMigration()
+                        .addCallback(SleepDatabaseCallback(scope))
+                        .build()
+                    INSTANCE = instance
 
-                    }
-
-                    return instance
                 }
+                return instance
+            }
         }
 
-        private class SleepDatabaseCallback(val scope: CoroutineScope): RoomDatabase.Callback() {
+        private class SleepDatabaseCallback(val scope: CoroutineScope) : RoomDatabase.Callback() {
             override fun onCreate(db: SupportSQLiteDatabase) {
                 super.onCreate(db)
                 INSTANCE?.let { database ->
@@ -47,7 +46,6 @@ abstract class SleepDatabase : RoomDatabase() {
                     }
                 }
             }
-
         }
 
         suspend fun populateDatabase(sleepDatabaseDao: SleepDatabaseDao) {
@@ -55,12 +53,8 @@ abstract class SleepDatabase : RoomDatabase() {
             // Not needed if you only populate on creation.
             sleepDatabaseDao.clear()
 
-            var sleepNight = SleepNight()
+            val sleepNight = SleepNight()
             sleepDatabaseDao.insert(sleepNight)
         }
-
-
     }
-
-
 }

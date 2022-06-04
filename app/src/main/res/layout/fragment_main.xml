@@ -1,114 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
-<data>
-<variable name="TransactionAdapter" type="com.harunkor.roomdatabasesample.presentation.home.TransactionAdapter"/>
-</data>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="TransactionAdapter"
+            type="com.harunkor.roomdatabasesample.presentation.home.TransactionAdapter" />
+    </data>
 
 
-<androidx.constraintlayout.widget.ConstraintLayout 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.home.HomeFragment">
-
-    <ImageView
-        android:id="@+id/imageView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_200sdp"
-        android:background="@drawable/box"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="box" />
+        android:layout_height="match_parent"
+        tools:context=".presentation.home.HomeFragment">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_money"
-        style="@style/main_title_large_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/font"
-        android:text="@string/string_money"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_chainStyle="packed" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:background="@drawable/box"
+            android:contentDescription="box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textView2"
-        style="@style/main_currency_text_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_4sdp"
-        android:text="@string/string_dolar_sign"
-        app:layout_constraintEnd_toStartOf="@+id/tv_money"
-        app:layout_constraintTop_toTopOf="@+id/tv_money" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_money"
+            style="@style/main_title_large_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font"
+            android:text="@string/string_money"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textView3"
-        style="@style/main_sub_title_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/string_usd"
-        app:layout_constraintBottom_toTopOf="@+id/button_add_money"
-        app:layout_constraintEnd_toEndOf="@+id/tv_money"
-        app:layout_constraintStart_toStartOf="@+id/tv_money"
-        app:layout_constraintTop_toBottomOf="@+id/tv_money" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView2"
+            style="@style/main_currency_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:text="@string/string_dolar_sign"
+            app:layout_constraintEnd_toStartOf="@+id/tv_money"
+            app:layout_constraintTop_toTopOf="@+id/tv_money" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_add_money"
-        style="@style/main_button_style"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:text="@string/string_add_money"
-        app:cornerRadius="@dimen/_8sdp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toStartOf="@+id/button_transfer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView3"
+            style="@style/main_sub_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_usd"
+            app:layout_constraintBottom_toTopOf="@+id/button_add_money"
+            app:layout_constraintEnd_toEndOf="@+id/tv_money"
+            app:layout_constraintStart_toStartOf="@+id/tv_money"
+            app:layout_constraintTop_toBottomOf="@+id/tv_money" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_transfer"
-        style="@style/main_button_style"
-        android:fontFamily="@font/gilroy_medium"
-        android:text="@string/string_transfer_funds"
-        app:cornerRadius="@dimen/_8sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/button_add_money"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_add_money"
-        app:layout_constraintTop_toTopOf="@+id/button_add_money" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add_money"
+            style="@style/main_button_style"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/string_add_money"
+            app:cornerRadius="@dimen/_8sdp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/button_transfer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/_minus16sdp"
-        android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:contentDescription="desc" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_transfer"
+            style="@style/main_button_style"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/string_transfer_funds"
+            app:cornerRadius="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_add_money"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_add_money"
+            app:layout_constraintTop_toTopOf="@+id/button_add_money" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_main"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:padding="@dimen/_16sdp"
-        app:layout_constraintBottom_toBottomOf="@id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_minus16sdp"
+            android:background="@drawable/rounded_corner"
+            android:contentDescription="desc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ImageView
-        android:id="@+id/img_add"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:layout_marginEnd="@dimen/_16sdp"
-        android:src="@drawable/ic_main_add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/white"
-        android:contentDescription="box" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/img_add"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:contentDescription="box"
+            android:src="@drawable/ic_main_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

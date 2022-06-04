@@ -12,7 +12,7 @@ data class OutcomeTable(
     var outcomeId: Int = 0,
 
     @ColumnInfo(name = "campany_logo")
-    val companyLogo : Int = 0,
+    val companyLogo: Int = 0,
 
     @ColumnInfo(name = "outcome_title")
     val outcomeTitle: String = "",
@@ -21,6 +21,5 @@ data class OutcomeTable(
     val outcomeSubTitle: String = "",
 
     @ColumnInfo(name = "outcome_total")
-    val outcomeTotal : Float = 0.0F,
-
-    )
+    val outcomeTotal: Float = 0.0F,
+)

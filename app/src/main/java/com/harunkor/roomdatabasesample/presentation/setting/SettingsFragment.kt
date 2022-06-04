@@ -10,10 +10,8 @@ import com.harunkor.roomdatabasesample.R
 
 class SettingsFragment : Fragment() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -23,6 +21,4 @@ class SettingsFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_settings, container, false)
     }
-
-
 }

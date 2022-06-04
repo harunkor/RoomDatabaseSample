@@ -12,14 +12,14 @@ data class AllTransactions(
     var incomeId: Int = 0,
 
     @ColumnInfo(name = "all_transactions_logo")
-    val companyLogo : Int = 0,
+    val companyLogo: Int = 0,
 
     @ColumnInfo(name = "all_transactions_title")
-    val allTransactionsTitle : String = "",
+    val allTransactionsTitle: String = "",
 
     @ColumnInfo(name = "all_transactions_subTitle")
-    val allTransactionsSubTitle : String = "",
+    val allTransactionsSubTitle: String = "",
 
     @ColumnInfo(name = "all_transactions_total")
-    val allTransactionsTotal : Float = 0.0F,
+    val allTransactionsTotal: Float = 0.0F,
 )

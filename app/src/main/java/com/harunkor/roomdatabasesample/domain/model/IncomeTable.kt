@@ -9,17 +9,16 @@ data class IncomeTable(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "income_id")
     var incomeId: Int = 0,
-    
+
     @ColumnInfo(name = "campany_logo")
-    val companyLogo : Int = 0,
+    val companyLogo: Int = 0,
 
     @ColumnInfo(name = "income_title")
-    val incomeTitle : String = "",
+    val incomeTitle: String = "",
 
     @ColumnInfo(name = "income_subTitle")
-    val incomeSubTitle : String = "",
+    val incomeSubTitle: String = "",
 
     @ColumnInfo(name = "income_total")
-    val incomeTotal : Float = 0.0F,
-
-    )
+    val incomeTotal: Float = 0.0F,
+)
