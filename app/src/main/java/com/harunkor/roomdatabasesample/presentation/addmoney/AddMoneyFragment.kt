@@ -63,7 +63,12 @@ class AddMoneyFragment : Fragment() {
             addMoneyBinding.numbertext.append(".")
         }
         addMoneyBinding.btnback.setOnClickListener {
-            addMoneyBinding.numbertext.append("")
+
+           if (addMoneyBinding.numbertext.text.isNotEmpty() ){
+                val resultText = addMoneyBinding.numbertext.text
+                addMoneyBinding.numbertext.text = resultText.substring(0, resultText.length - 1)
+            }
+
         }
         addMoneyBinding.btn0.setOnClickListener {
             addMoneyBinding.numbertext.append("0")

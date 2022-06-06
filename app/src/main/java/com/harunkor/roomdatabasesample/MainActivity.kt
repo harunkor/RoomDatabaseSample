@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        activityMainBinding= ActivityMainBinding.inflate(layoutInflater)
+        setContentView(activityMainBinding.root)
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
@@ -28,17 +29,15 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
         bottomNavigation.setupWithNavController(navController)
 
-//       navController.addOnDestinationChangedListener { controller, destination, arguments ->
-//// ??          ActivityMainBinding.inflate(layoutInflater)
-//// ??          setContentView(activityMainBinding.root)
-//            if (destination.id == R.id.addMoneyFragment) {
-//                activityMainBinding.walletBottomBar.visibility = View.GONE
-//                activityMainBinding.walletFloatButton.visibility = View.GONE
-//            } else{
-//                activityMainBinding.walletBottomBar.visibility = View.VISIBLE
-//                activityMainBinding.walletFloatButton.visibility = View.VISIBLE
-//            }
-//        }
+       navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            if (destination.id == R.id.addMoneyFragment) {
+                activityMainBinding.walletBottomBar.visibility = View.GONE
+                activityMainBinding.walletFloatButton.visibility = View.GONE
+            } else{
+                activityMainBinding.walletBottomBar.visibility = View.VISIBLE
+                activityMainBinding.walletFloatButton.visibility = View.VISIBLE
+            }
+        }
 
 
         allTranslationViewModel.allTranslations.observe(this) { allTranslations ->
