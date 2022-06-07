@@ -9,6 +9,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.harunkor.roomdatabasesample.databinding.ActivityMainBinding
+import com.harunkor.roomdatabasesample.presentation.home.HomeFragment
 import com.harunkor.roomdatabasesample.utils.MockData
 
 
@@ -23,11 +24,20 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(activityMainBinding.root)
 
+    //    val fragment=HomeFragment()
+    //    supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView,HomeFragment()).commit()
+
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
         bottomNavigation.setupWithNavController(navController)
+
+        activityMainBinding.walletFloatButton.setOnClickListener {
+            navController.navigateUp() // to clear previous navigation history
+            navController.navigate(R.id.addMoneyFragment)
+        }
+
 
        navController.addOnDestinationChangedListener { controller, destination, arguments ->
             if (destination.id == R.id.addMoneyFragment) {
@@ -56,6 +66,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
     private fun loadData() {
         val allTranslationList = MockData.getAllTableList()
         val incomeList = MockData.getIncomeTableList()
@@ -73,4 +84,6 @@ class MainActivity : AppCompatActivity() {
             allTranslationViewModel.insertOutcome(outcome)
         }
     }
+
+
 }
