@@ -45,11 +45,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/displayMessage"
         style="@style/main_sub_title_style"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Send Money"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/imagebutton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +62,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/displayMessage" />
 
     <ImageView
         android:id="@+id/imageView6"

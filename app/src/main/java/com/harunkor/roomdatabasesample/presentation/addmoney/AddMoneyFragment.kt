@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
@@ -14,6 +15,8 @@ import com.harunkor.roomdatabasesample.databinding.FragmentAddMoneyBinding
 
 class AddMoneyFragment : Fragment() {
     private lateinit var addMoneyBinding: FragmentAddMoneyBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -25,6 +28,15 @@ class AddMoneyFragment : Fragment() {
     ): View? {
         addMoneyBinding=
             DataBindingUtil.inflate(inflater,R.layout.fragment_add_money,container,false)
+
+//        val view=inflater.inflate(R.layout.fragment_add_money,container,false)
+//        val textView: TextView =view.findViewById(R.id.displayMessage)
+//
+//        val args=this.arguments
+//        val inputData=args?.get("data")
+//        textView.text=inputData.toString()
+
+
         return addMoneyBinding.root
     }
 
@@ -78,6 +90,7 @@ class AddMoneyFragment : Fragment() {
                 Toast.makeText(getActivity(),"Acık!",Toast.LENGTH_SHORT).show();
             }
         }
+
 
         super.onViewCreated(view, savedInstanceState)
 
