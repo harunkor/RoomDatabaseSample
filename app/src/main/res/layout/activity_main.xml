@@ -58,6 +58,7 @@
                 app:labelVisibilityMode="unlabeled"
                 app:menu="@menu/main_bottom_menu" />
         </com.google.android.material.bottomappbar.BottomAppBar>
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

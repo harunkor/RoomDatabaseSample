@@ -65,12 +65,12 @@
 
     <!--  Activity Main String.  -->
     <string name="app_name">RoomDatabaseSample</string>
-    <string name="string_add_money">Add Money</string>
+    <string name="string_add_money">Income</string>
     <string name="string_money">31 000</string>
     <string name="string_hint_income_outcome">3 000</string>
     <string name="string_dolar_sign">$</string>
     <string name="string_usd">USD</string>
-    <string name="string_transfer_funds">Transfer Funds</string>
+    <string name="string_transfer_funds">Expense</string>
     <string name="string_income">Income</string>
     <string name="string_outcome">Outcome</string>
     <string name="title_main">Main</string>

@@ -5,11 +5,12 @@ import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.harunkor.roomdatabasesample.databinding.ActivityMainBinding
-import com.harunkor.roomdatabasesample.presentation.home.HomeFragment
+import com.harunkor.roomdatabasesample.presentation.home.HomeFragmentDirections
 import com.harunkor.roomdatabasesample.utils.MockData
 
 
@@ -24,9 +25,6 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(activityMainBinding.root)
 
-    //    val fragment=HomeFragment()
-    //    supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView,HomeFragment()).commit()
-
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
@@ -34,18 +32,24 @@ class MainActivity : AppCompatActivity() {
         bottomNavigation.setupWithNavController(navController)
 
         activityMainBinding.walletFloatButton.setOnClickListener {
+
             navController.navigateUp() // to clear previous navigation history
             navController.navigate(R.id.addMoneyFragment)
         }
-
 
        navController.addOnDestinationChangedListener { controller, destination, arguments ->
             if (destination.id == R.id.addMoneyFragment) {
                 activityMainBinding.walletBottomBar.visibility = View.GONE
                 activityMainBinding.walletFloatButton.visibility = View.GONE
+                activityMainBinding.bottomNavigationView.visibility=View.GONE
+            } else if (destination.id ==R.id.addPaymentFragment){
+                activityMainBinding.walletBottomBar.visibility = View.GONE
+                activityMainBinding.walletFloatButton.visibility = View.GONE
+                activityMainBinding.bottomNavigationView.visibility=View.GONE
             } else{
                 activityMainBinding.walletBottomBar.visibility = View.VISIBLE
                 activityMainBinding.walletFloatButton.visibility = View.VISIBLE
+                activityMainBinding.bottomNavigationView.visibility=View.VISIBLE
             }
         }
 

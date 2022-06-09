@@ -31,6 +31,7 @@
             style="@style/main_title_large_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
             android:fontFamily="@font/font"
             android:text="@string/string_money"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
@@ -55,32 +56,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/string_usd"
-            app:layout_constraintBottom_toTopOf="@+id/button_add_money"
             app:layout_constraintEnd_toEndOf="@+id/tv_money"
             app:layout_constraintStart_toStartOf="@+id/tv_money"
             app:layout_constraintTop_toBottomOf="@+id/tv_money" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_add_money"
-            style="@style/main_button_style"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:text="@string/string_add_money"
-            app:cornerRadius="@dimen/_8sdp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView2"
-            app:layout_constraintEnd_toStartOf="@+id/button_transfer"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_transfer"
-            style="@style/main_button_style"
-            android:fontFamily="@font/gilroy_medium"
-            android:text="@string/string_transfer_funds"
-            app:cornerRadius="@dimen/_8sdp"
-            app:layout_constraintBottom_toBottomOf="@+id/button_add_money"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button_add_money"
-            app:layout_constraintTop_toTopOf="@+id/button_add_money" />
 
         <ImageView
             android:id="@+id/imageView2"

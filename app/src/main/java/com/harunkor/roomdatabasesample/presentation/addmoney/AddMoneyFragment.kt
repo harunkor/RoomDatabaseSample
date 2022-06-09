@@ -5,75 +5,78 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
-import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.harunkor.roomdatabasesample.R
 import com.harunkor.roomdatabasesample.databinding.FragmentAddMoneyBinding
-
+import com.harunkor.roomdatabasesample.presentation.home.HomeFragmentDirections
 
 class AddMoneyFragment : Fragment() {
+
     private lateinit var addMoneyBinding: FragmentAddMoneyBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        addMoneyBinding=
-            DataBindingUtil.inflate(inflater,R.layout.fragment_add_money,container,false)
-
-//        val view=inflater.inflate(R.layout.fragment_add_money,container,false)
-//        val textView: TextView =view.findViewById(R.id.displayMessage)
-//
-//        val args=this.arguments
-//        val inputData=args?.get("data")
-//        textView.text=inputData.toString()
-
-
+        addMoneyBinding = FragmentAddMoneyBinding.inflate(inflater, container, false)//***
         return addMoneyBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
         addMoneyBinding.imagebutton.setOnClickListener {
-            findNavController().navigate(R.id.action_addMoneyFragment_to_app_bar_main)
+            findNavController().navigate(R.id.homeFragment)
         }
         addMoneyBinding.btn1.setOnClickListener {
             addMoneyBinding.numbertext.append("1")
         }
+
         addMoneyBinding.btn2.setOnClickListener {
             addMoneyBinding.numbertext.append("2")
         }
+
         addMoneyBinding.btn3.setOnClickListener {
             addMoneyBinding.numbertext.append("3")
         }
+
         addMoneyBinding.btn4.setOnClickListener {
             addMoneyBinding.numbertext.append("4")
         }
+
         addMoneyBinding.btn5.setOnClickListener {
             addMoneyBinding.numbertext.append("5")
         }
+
         addMoneyBinding.btn6.setOnClickListener {
             addMoneyBinding.numbertext.append("6")
         }
+
         addMoneyBinding.btn7.setOnClickListener {
             addMoneyBinding.numbertext.append("7")
         }
+
         addMoneyBinding.btn8.setOnClickListener {
             addMoneyBinding.numbertext.append("8")
         }
+
         addMoneyBinding.btn9.setOnClickListener {
             addMoneyBinding.numbertext.append("9")
         }
+
         addMoneyBinding.btndot.setOnClickListener {
             addMoneyBinding.numbertext.append(".")
         }
+
         addMoneyBinding.btnback.setOnClickListener {
 
            if (addMoneyBinding.numbertext.text.isNotEmpty() ){
@@ -90,9 +93,8 @@ class AddMoneyFragment : Fragment() {
                 Toast.makeText(getActivity(),"Acık!",Toast.LENGTH_SHORT).show();
             }
         }
-
-
-        super.onViewCreated(view, savedInstanceState)
-
+        addMoneyBinding.buttonTransfer.setOnClickListener {
+            findNavController().navigate(R.id.addPaymentFragment)
+        }
     }
 }
