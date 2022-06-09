@@ -14,11 +14,23 @@
         android:layout_height="wrap_content"
         android:thumb="@drawable/ic_group_1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.587"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/keyboard"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/keyboard"
+        app:layout_constraintTop_toBottomOf="@+id/keyboard"
+        app:layout_constraintVertical_bias="0.072"
         app:switchMinWidth="280dp"
         app:track="@drawable/thumb" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_transfer"
+        style="@style/main_button_style"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="@string/string_transfer_funds"
+        app:cornerRadius="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayMessage" />
 
     <TextView
         android:id="@+id/textView"
@@ -39,7 +51,7 @@
         android:layout_width="@dimen/_32sdp"
         android:layout_height="@dimen/_32sdp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="5dp"
         android:src="@drawable/ic_baseline_arrow_back_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -47,22 +59,26 @@
     <TextView
         android:id="@+id/displayMessage"
         style="@style/main_sub_title_style"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Income"
         android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imagebutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imagebutton" />
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toEndOf="@+id/imagebutton"
+        app:layout_constraintTop_toTopOf="@+id/imagebutton"
+        app:layout_constraintVertical_bias="0.562" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayMessage" />
+        app:layout_constraintTop_toBottomOf="@+id/button_transfer" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -102,13 +118,13 @@
     <TextView
         android:id="@+id/numbertext"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:textSize="35sp"
-        android:textStyle="bold"
+        android:layout_height="70dp"
         android:gravity="center"
         android:textColor="#414084"
+        android:textSize="35sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
@@ -116,8 +132,7 @@
         android:id="@+id/keyboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/switchCompat"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numbertext">
@@ -134,8 +149,9 @@
                 android:backgroundTint="@color/white"
                 android:text="1"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/btn2"
@@ -144,8 +160,9 @@
                 android:backgroundTint="@color/white"
                 android:text="2"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/btn3"
@@ -154,8 +171,9 @@
                 android:backgroundTint="@color/white"
                 android:text="3"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
         </TableRow>
 
         <TableRow
@@ -170,8 +188,9 @@
                 android:backgroundTint="@color/white"
                 android:text="4"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/btn5"
@@ -180,8 +199,9 @@
                 android:backgroundTint="@color/white"
                 android:text="5"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/btn6"
@@ -190,8 +210,9 @@
                 android:backgroundTint="@color/white"
                 android:text="6"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
         </TableRow>
 
         <TableRow
@@ -206,8 +227,9 @@
                 android:backgroundTint="@color/white"
                 android:text="7"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/btn8"
@@ -216,8 +238,9 @@
                 android:backgroundTint="@color/white"
                 android:text="8"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/btn9"
@@ -226,8 +249,9 @@
                 android:backgroundTint="@color/white"
                 android:text="9"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
         </TableRow>
 
         <TableRow
@@ -242,8 +266,9 @@
                 android:backgroundTint="@color/white"
                 android:text="."
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/btn0"
@@ -252,8 +277,9 @@
                 android:backgroundTint="@color/white"
                 android:text="0"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/btnback"
@@ -262,8 +288,9 @@
                 android:backgroundTint="@color/white"
                 android:text="back"
                 android:textColor="@color/grey"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle" />
         </TableRow>
 
     </TableLayout>

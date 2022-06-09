@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/app_bar_main">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/app_bar_main"
+        android:id="@+id/homeFragment"
         android:name="com.harunkor.roomdatabasesample.presentation.home.HomeFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_app_bar_main_to_addMoneyFragment"
+            android:id="@+id/action_home_fragment_to_addMoneyFragment"
             app:destination="@id/addMoneyFragment" />
     </fragment>
     <fragment
@@ -24,9 +24,6 @@
         android:name="com.harunkor.roomdatabasesample.presentation.addmoney.AddMoneyFragment"
         android:label="fragment_add_money"
         tools:layout="@layout/fragment_add_money" >
-        <action
-            android:id="@+id/action_addMoneyFragment_to_app_bar_main"
-            app:destination="@id/app_bar_main" />
     </fragment>
     <fragment
         android:id="@+id/app_bar_settings"
@@ -42,5 +39,6 @@
         android:id="@+id/addPaymentFragment"
         android:name="com.harunkor.roomdatabasesample.presentation.addpayment.AddPaymentFragment"
         android:label="fragment_add_payment"
-        tools:layout="@layout/fragment_add_payment" />
+        tools:layout="@layout/fragment_add_payment" >
+    </fragment>
 </navigation>
